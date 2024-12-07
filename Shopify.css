@@ -1,0 +1,513 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2e5b9;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #cfcac6;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 3rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .one {
+    font-size: 1.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 4.5rem;
+}
+
+.navbar .one .link {
+    text-decoration: none;
+    color: #14134a;
+}
+
+.navbar .one .blue {
+    color: #5789b5;
+}
+
+.navbar .items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .items .nav-menu {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .items .nav-menu li a {
+    text-decoration: none;
+    color: #14134a;
+    padding-right: 1rem;
+}
+
+.navbar .items .nav-icons {
+    display: flex;
+    gap: 2rem;
+    margin-right: 4rem;
+}
+
+
+.navbar .menu-toggle {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navbar .items {
+        position: relative;    
+    }
+
+    .navbar .items .nav-menu {
+        display: grid;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #cfcac6;
+        width: 100%;
+        height: 50vh;
+        z-index: 10;
+        list-style: none;
+        padding:2rem;
+        border-radius: 2rem;
+    }
+
+    .navbar .items .nav-menu :hover {
+        color: #f1c40f;
+    }
+    .navbar .items.active {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar .items .nav-menu {
+        display: none;
+    }
+
+    .navbar .items.active .nav-menu {
+        display:grid;
+        gap: .1rem;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        padding-right: 4rem;
+    }
+
+    .navbar .items.active .nav-icons {
+        display: flex;
+        margin-right: 4rem;
+    }
+}
+
+.containor {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   margin-top: 5rem;
+}
+
+.containor .text {
+    padding-left: 2rem;
+    flex: 1;
+}
+
+.containor .text h1 {
+    color: #14134a;
+    font-weight: bold;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.containor .text p {
+    padding-bottom: 2rem;
+    font-weight: 600;
+    color: #636e72;
+}
+
+.containor .text button {
+    color: #636e72;
+    background-color: #14134a;
+    width: 7rem;
+    height: 3rem;
+    border: 2px solid #14134a;
+    border-radius: 2rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.containor .text :hover {
+    background-color: #f2e5b9;
+}
+
+.containor .text button a {
+    text-decoration: none;
+    color: #636e72;
+}
+
+.containor .pic {
+    flex: 1;
+    padding-top: 2rem;
+}
+
+.containor .description {
+   flex: 1;
+   padding-right: 1rem;
+   padding-left: 6rem;
+}
+
+.containor .description h2 {
+    color: #14134a;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.containor .description p {
+    font-weight: 600;
+    color: #636e72;
+}
+
+@media (max-width: 768px) {
+
+    .containor {
+        display: flex;
+        padding-top: 4rem;
+        gap: 1rem;
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .containor .text {
+        font-size: 2vw;
+    }
+
+    .containor .text h1 {
+        font-size: 5vw;
+    }
+
+    .containor .text button {
+        width: 30vw;
+    }
+
+    .containor .text button a {
+        font-size: 2vw;
+    }
+
+    .containor .description {
+        display: none;
+    }
+
+    .containor .pic {
+        padding-right: 1rem;
+        max-width: 50%;
+        flex: 1;
+    }
+
+    .containor .pic img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.main .buy {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.main .buy li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.main .buy a {
+    color: #636e72;
+    padding-bottom: 1.5rem;
+    display: block;
+    text-align: center;
+}
+
+.main .buy li a:hover {
+    color: #14134a;
+}
+
+.main .buy img {
+    padding-bottom: 2rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.main .buy img:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.main .buy:hover img {
+    filter: blur(4px);
+    transition: filter 0.3s ease-in-out;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.main .buy img:hover {
+    filter: none;
+}
+
+@media (max-width: 768px) {
+    
+    .main .buy {
+        padding-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .main .buy li a {
+        display: grid;
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+
+.about {
+    background-color: #cfcac6;
+    display: block
+}
+
+.about h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #14134a;
+    padding: 2rem;
+}
+
+.about p {
+    color: #14134a;
+    padding:0 5rem 2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.7rem;
+}
+
+@media (max-width: 768px) {
+
+    .about h3 {
+        font-size: 5vw;
+    }
+
+    .about p {
+        font-size: 3vw;
+        text-align: left;
+        line-height: 2rem;
+    }
+}
+
+footer {
+    padding: 1.5rem;
+}
+
+footer .contain {
+    border-top: 1px solid #14134a;
+    border-bottom: 1px solid #14134a;
+}
+
+footer .contain a {
+    text-decoration: none;
+}
+
+footer .contain .def {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin: 0 1rem; 
+    padding: 2rem 0;
+}
+
+footer .contain .two {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 2rem .5rem 0;
+}
+
+footer .contain .two a {
+    color: black;
+}
+
+footer .contain .two a .blue {
+    color: #5789b5;
+}
+
+footer .contain .def .first h2 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #2f3640;
+    padding: .5rem 3rem 1rem;
+}
+
+.def .first li {
+    font-size: .8rem;
+    line-height: 1.9rem;
+}
+
+.def .first li a {
+    padding-left: 3rem;
+}
+
+.def .second h3 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #2f3640;
+    padding: .5rem 3rem 1rem 1.5rem;
+}
+
+.def .second li {
+    font-size: .8rem;
+    line-height: 1.9rem;
+}
+
+.def .second li a {
+    padding-left: 1.5rem;
+}
+
+.def .third {
+    padding-right: 1rem;
+}
+
+.def .third h4 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #2f3640;
+    padding: .5rem 0 1rem;
+}
+
+.def .third p {
+    color: #14134a;
+    font-size: .9rem;
+    line-height: 1.1rem;
+    padding-bottom: 1rem;
+}
+
+.def .third .form::placeholder {
+    background-color: #cfcac6;
+}
+
+.def .third .form {
+    width: 60%;
+    height: 40px;
+    border-radius: .2rem;
+    border: 1px solid #d2dae2;
+    padding-left: 1rem;
+}
+
+.def .third .button {
+    height: 40px;
+    width: 40%;
+    border: 0;
+    border-radius: .2rem;
+    color: white;
+    background-color: #14134a;
+}
+
+.def .third .forms {
+    display: flex;
+}
+
+.def .third input:focus::placeholder {
+    outline: none;
+}
+
+.def .third input:focus {
+    outline: none;
+}
+
+.def .fourth{
+    padding-left: 5rem;
+}
+
+.def .fourth h5 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #2f3640;
+    padding: .5rem 0 1rem 4rem;
+}
+
+.def .fourth li {
+    font-size: .8rem;
+    line-height: 1.9rem;
+}
+
+.def .fourth li a {
+    padding-left: 4rem;
+}
+
+@media (max-width: 768px) {
+    
+    footer .contain {
+        display: grid;
+    }
+
+    footer .contain .two {
+        font-size: 12vw;
+    }
+
+    footer .contain .def {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    footer .contain .def .second {
+        padding-left: 5rem;
+    }
+
+    footer .contain .def .third {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    footer .contain .def .third p {
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    footer .contain .def .fourth {
+        grid-row: 1/-1;
+        grid-column: 3 / 3;
+        padding-right: 5rem;
+    }
+}
