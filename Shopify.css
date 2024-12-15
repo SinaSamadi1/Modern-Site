@@ -130,15 +130,11 @@ body a {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* flex: 1; */
+        flex: 1;
     }
 
     .navbar .items.active .nav-icons {
         display: none;
-    }
-
-    .navbar .items.active .menu-toggle {
-        background-color: #14134a;
     }
 }
 
